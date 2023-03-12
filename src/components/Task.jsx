@@ -1,19 +1,12 @@
 import { useState } from "react"
 import Button from "./Button"
 
-const Task = ({ task, handleDelete }) => {
-    const [checked, setChecked] = useState(false);
-
-    const handleCheckbox = (event) => {
-        setChecked(!checked)
-    }
-
-
+const Task = ({ task, id, checked, handleDelete, handleCheckbox }) => {
     return (
         <div className="task">
-            <input type="checkbox" onChange={handleCheckbox} />
+            <input type="checkbox" checked={checked} onChange={() => handleCheckbox(id)} />
             <p className={checked ? "mark" : ""}>{task}</p>
-            <Button color="red" icon="fa-solid fa-trash" click={handleDelete} disabled={!checked}></Button>
+            <Button color="red" icon="fa-solid fa-trash" click={() => handleDelete(id)} disabled={!checked}></Button>
         </div>
     )
 }
