@@ -10,5 +10,6 @@ export default {
       "body": ["Roboto", "sans-serif"]
     }
   },
+  darkMode: "class",
   plugins: [],
 }

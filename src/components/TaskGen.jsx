@@ -24,7 +24,7 @@ const TaskGen = ({ setTasks, tasks }) => {
 
     return (
         <div className="flex mb-8" onKeyDown={handleEnter}>
-            <input className="p-4 flex-1 placeholder-gray-800 transition-all rounded-l-md text-black bg-white/70 focus:bg-white/100 focus:outline-0" type="text" placeholder="¿Qué tenés que hacer?" onChange={handleMessage} value={taskName} />
+            <input className="p-4 flex-1 placeholder-gray-800 transition-all rounded-l-md text-black dark:text-white bg-white/70 focus:bg-white/100 focus:outline-0 dark:bg-zinc-700/70 dark:focus:bg-zinc-700/100 dark:placeholder-white" type="text" placeholder="¿Qué tenés que hacer?" onChange={handleMessage} value={taskName} />
             <button onClick={handleTasks} className="bg-green-600 transition-all rounded-r-md aspect-square flex justify-center items-center p-4 hover:bg-green-700"><SendIcon/></button>
         </div>
     )
